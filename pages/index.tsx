@@ -3,6 +3,15 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 
+const YourComponent = () => (
+  <Image
+    src="/images/profile.jpg" // Route of the image file
+    height={144} // Desired size with correct aspect ratio
+    width={144} // Desired size with correct aspect ratio
+    alt="Your Name"
+  />
+);
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -16,6 +25,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Read <Link href="/posts/first-post">this page!</Link>
         </h1>
+        <YourComponent></YourComponent>
 
         <p className={styles.description}>
           Get started by editing{' '}
